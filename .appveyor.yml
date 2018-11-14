@@ -22,7 +22,7 @@ install:
   - hg clone %OPENJFX_REPO% %WORK_DIR%
   - cd "%WORK_DIR%"
   - hg up %OPENJFX_TAG%
-  - set JDKJFX=%OPEN_JDK_DIR%-%OPENJFX_TAG%
+  - set JDKJFX=%OPEN_JDK_DIR%-with-jfx%OPENJFX_TAG%
 
 build_script:
   - echo "Patching build.gradle to allow parsing the version string provided by OpenJDK 8"
@@ -30,8 +30,9 @@ build_script:
   - ps: (Get-Content -path build.gradle -Raw) -replace 'v\.substring\(ib \+ 8', 'v.substring(ib + 7' | Set-Content -path build.gradle
   - echo "running gradle in %cd%"
   - gradlew -is
-  - xcopy %APPVEYOR_BUILD_FOLDER%\%OPEN_JDK_DIR% %JDKJFX% /i /e /k /h
-  - xcopy %APPVEYOR_BUILD_FOLDER%\%WORK_DIR%\build\sdk\rt %JDKJFX%\jre /i /e /k /h
+  - md %JDKJFX%
+  - xcopy %APPVEYOR_BUILD_FOLDER%\%OPEN_JDK_DIR% %JDKJFX%\%JDKJFX% /i /e /k /h
+  - xcopy %APPVEYOR_BUILD_FOLDER%\%WORK_DIR%\build\sdk\rt %JDKJFX%\%JDKJFX%\jre /i /e /k /h
 
 artifacts:
   - path: /$(WORK_DIR)/build/sdk
