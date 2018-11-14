@@ -24,10 +24,9 @@ install:
   - hg up %OPENJFX_TAG%
 
 build_script:
-  - echo "Patching build.gradle to allow parsing the version string provided by OpenJDK"
+  - echo "Patching build.gradle to allow parsing the version string provided by OpenJDK 8"
   - ps: (Get-Content -path build.gradle -Raw) -replace 'v\.indexOf\(" \(build "\)', 'v.indexOf("(build ")' | Set-Content -path build.gradle
   - ps: (Get-Content -path build.gradle -Raw) -replace 'v\.substring\(ib \+ 8', 'v.substring(ib + 7' | Set-Content -path build.gradle
-  - type build.gradle
   - echo "running gradle in %cd%"
   - gradlew -is
 
@@ -45,6 +44,6 @@ deploy:
   artifact: openjfx-sdk
   draft: false
   prerelease: false
-  force_update: false
+  force_update: true
   on:
     branch: master

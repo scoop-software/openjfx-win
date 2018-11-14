@@ -3,3 +3,8 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/da1javueht7fml8p?svg=true)](https://ci.appveyor.com/project/siordache/openjfx-win)
 
 ## OpenJFX binaries for Windows ##
+
+This project uses [AppVeyor](https://www.appveyor.com/) to create OpenJFX binaries and make them available on the [releases](https://github.com/scoop-software/openjfx-win/releases) page.
+
+The desired OpenJFX version can be configured using the environment variable `OPENJFX_TAG` in
+[.appveyor.yml](https://github.com/scoop-software/openjfx-win/blob/master/.apveyor.yml).
