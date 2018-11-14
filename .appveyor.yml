@@ -32,7 +32,7 @@ build_script:
 
 artifacts:
   - path: /$(WORK_DIR)/build/sdk
-    name: openjfx-sdk
+    name: openjfx-sdk-$(OPENJFX_TAG)
     type: zip
 
 deploy:
@@ -41,7 +41,7 @@ deploy:
   provider: GitHub
   auth_token:
     secure: KBros/Suy0qqL2zz85b35gQDBrtyILJxQDoDNIfE1XZcqoOWxtnV7JDPlXCr/AlM
-  artifact: openjfx-sdk
+  artifact: openjfx-sdk-$(OPENJFX_TAG)
   draft: false
   prerelease: false
   force_update: true

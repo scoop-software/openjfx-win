@@ -7,4 +7,4 @@
 This project uses [AppVeyor](https://www.appveyor.com/) to create OpenJFX binaries and make them available on the [releases](https://github.com/scoop-software/openjfx-win/releases) page.
 
 The desired OpenJFX version can be configured using the environment variable `OPENJFX_TAG` in
-[.appveyor.yml](https://github.com/scoop-software/openjfx-win/blob/master/.apveyor.yml).
+[.appveyor.yml](https://github.com/scoop-software/openjfx-win/blob/master/.appveyor.yml).
