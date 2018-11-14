@@ -1,0 +1,9 @@
+Copyright 2018 SCOOP Software GmbH
+
+The AppVeyor configuration file (.appveyor.yml) is released under the
+Apache 2.0 license (https://www.apache.org/licenses/LICENSE-2.0).
+
+The OpenJFX binaries available in the "releases" section are subject to the
+copyright terms and conditions of OpenJDK (https://openjdk.java.net/legal/).
+Therefore, they are distributed under the GPL 2 with the Classpath Exception
+(http://openjdk.java.net/legal/gplv2+ce.html).
