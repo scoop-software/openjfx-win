@@ -9,7 +9,7 @@ It also puts up an OpenJDK distribution that includes OpenJFX.
 
 You can customize the AppVeyor build by editing the variables declared in the `environment` section of
 [.appveyor.yml](https://github.com/scoop-software/openjfx-win/blob/master/.appveyor.yml):
-- `OPENJFX_TAG`: the OpenJFX version to be build. It must correspond to an existing [Mercurial tag](https://hg.openjdk.java.net/openjfx/8u-dev/rt/tags).
+- `OPENJFX_TAG`: the OpenJFX version to be built. It must correspond to an existing [Mercurial tag](https://hg.openjdk.java.net/openjfx/8u-dev/rt/tags).
 - `OPEN_JDK_URL`: the URL of the desired OpenJDK version. It must be in sync with
 the value of `OPEN_JDK_DIR`.
 - `OPEN_JDK_DIR`: the root directory of the files in the archive located at `OPEN_JDK_URL`.
